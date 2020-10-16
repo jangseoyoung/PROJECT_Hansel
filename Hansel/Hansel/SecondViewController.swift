@@ -13,6 +13,18 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var countLabel : UILabel!
 
+    @IBAction func DeleteButton(_ sender : UIBarButtonItem){
+        let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "현재 날짜의 모든 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        
+        let deleteAction = UIAlertAction(title: "삭제", style: .destructive, handler: nil)
+        
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
