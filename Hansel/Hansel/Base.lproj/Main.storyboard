@@ -150,6 +150,7 @@
         <!--View Controller-->
         <scene sceneID="W6D-sj-fGX">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1g-3a-jya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="iKB-yg-Rdn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wtW-76-vQH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -172,17 +173,22 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rN5-7D-TXV">
+                                <rect key="frame" x="41" y="531" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0kf-n6-jkF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ib6-Rb-nGw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m1g-3a-jya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000" y="631"/>
         </scene>
