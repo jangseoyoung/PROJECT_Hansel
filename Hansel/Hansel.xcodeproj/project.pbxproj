@@ -14,6 +14,7 @@
 		EF5684BA2536FFA500702966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5684B92536FFA500702966 /* Assets.xcassets */; };
 		EF5684BD2536FFA500702966 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5684BB2536FFA500702966 /* LaunchScreen.storyboard */; };
 		EF5684C625370DB400702966 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5684C525370DB400702966 /* SecondViewController.swift */; };
+		EF7C2947254049F200E3A586 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C2946254049F200E3A586 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EF5684BC2536FFA500702966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5684BE2536FFA500702966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5684C525370DB400702966 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EF7C2946254049F200E3A586 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				EF5684B22536FFA200702966 /* SceneDelegate.swift */,
 				EF5684B42536FFA200702966 /* ViewController.swift */,
 				EF5684C525370DB400702966 /* SecondViewController.swift */,
+				EF7C2946254049F200E3A586 /* AddViewController.swift */,
 				EF5684B62536FFA200702966 /* Main.storyboard */,
 				EF5684B92536FFA500702966 /* Assets.xcassets */,
 				EF5684BB2536FFA500702966 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7C2947254049F200E3A586 /* AddViewController.swift in Sources */,
 				EF5684C625370DB400702966 /* SecondViewController.swift in Sources */,
 				EF5684B52536FFA200702966 /* ViewController.swift in Sources */,
 				EF5684B12536FFA200702966 /* AppDelegate.swift in Sources */,
