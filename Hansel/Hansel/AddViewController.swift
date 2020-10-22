@@ -9,6 +9,8 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var memoTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
