@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF47AF622542C759000E1EE1 /* PreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47AF612542C759000E1EE1 /* PreTableViewCell.swift */; };
+		EF47AF652542C7D9000E1EE1 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47AF642542C7D9000E1EE1 /* DetailTableViewCell.swift */; };
 		EF5684B12536FFA200702966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5684B02536FFA200702966 /* AppDelegate.swift */; };
 		EF5684B32536FFA200702966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5684B22536FFA200702966 /* SceneDelegate.swift */; };
 		EF5684B52536FFA200702966 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5684B42536FFA200702966 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF47AF612542C759000E1EE1 /* PreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreTableViewCell.swift; sourceTree = "<group>"; };
+		EF47AF642542C7D9000E1EE1 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		EF5684AD2536FFA200702966 /* Hansel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hansel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5684B02536FFA200702966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF5684B22536FFA200702966 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF47AF672542DD04000E1EE1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EF5684B62536FFA200702966 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EF47AF692542DD8E000E1EE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF47AF6A2542DD95000E1EE1 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				EF5684B42536FFA200702966 /* ViewController.swift */,
+				EF7C2946254049F200E3A586 /* AddViewController.swift */,
+				EF5684C525370DB400702966 /* SecondViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		EF5684A42536FFA200702966 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +89,13 @@
 		EF5684AF2536FFA200702966 /* Hansel */ = {
 			isa = PBXGroup;
 			children = (
+				EF47AF692542DD8E000E1EE1 /* Model */,
+				EF47AF6A2542DD95000E1EE1 /* VC */,
+				EF47AF672542DD04000E1EE1 /* UI */,
 				EF5684B02536FFA200702966 /* AppDelegate.swift */,
 				EF5684B22536FFA200702966 /* SceneDelegate.swift */,
-				EF5684B42536FFA200702966 /* ViewController.swift */,
-				EF5684C525370DB400702966 /* SecondViewController.swift */,
-				EF7C2946254049F200E3A586 /* AddViewController.swift */,
-				EF5684B62536FFA200702966 /* Main.storyboard */,
+				EF47AF642542C7D9000E1EE1 /* DetailTableViewCell.swift */,
+				EF47AF612542C759000E1EE1 /* PreTableViewCell.swift */,
 				EF5684B92536FFA500702966 /* Assets.xcassets */,
 				EF5684BB2536FFA500702966 /* LaunchScreen.storyboard */,
 				EF5684BE2536FFA500702966 /* Info.plist */,
@@ -145,9 +175,11 @@
 			files = (
 				EF7C2947254049F200E3A586 /* AddViewController.swift in Sources */,
 				EF5684C625370DB400702966 /* SecondViewController.swift in Sources */,
+				EF47AF652542C7D9000E1EE1 /* DetailTableViewCell.swift in Sources */,
 				EF5684B52536FFA200702966 /* ViewController.swift in Sources */,
 				EF5684B12536FFA200702966 /* AppDelegate.swift in Sources */,
 				EF5684B32536FFA200702966 /* SceneDelegate.swift in Sources */,
+				EF47AF622542C759000E1EE1 /* PreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
