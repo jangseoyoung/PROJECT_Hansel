@@ -12,6 +12,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var yearLabel : UILabel!
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var countLabel : UILabel!
+    @IBOutlet weak var routesCount: UITextView!
 
     @IBAction func DeleteButton(_ sender : UIBarButtonItem){
         let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "현재 날짜의 모든 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
@@ -27,9 +28,25 @@ class SecondViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.topItem?.title = "All Routes"
-        // Do any additional setup after loading the view.
+        
+        self.routesCount.layer.cornerRadius = 0.5 * routesCount.bounds.size.width
+        self.routesCount.layer.borderWidth = 2.0
+        self.routesCount.layer.borderColor = UIColor.black.cgColor
+        
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as! DetailTableViewCell
+        
+    }
+    
+    
     
 
     /*
