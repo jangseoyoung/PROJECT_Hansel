@@ -16,6 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let Cell = tableView.dequeueReusableCell(withIdentifier: "PreCell") as! PreTableViewCell
+        return Cell
     }
     
     

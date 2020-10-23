@@ -43,6 +43,7 @@ class SecondViewController: UIViewController {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as! DetailTableViewCell
+        return cell
         
     }
     
