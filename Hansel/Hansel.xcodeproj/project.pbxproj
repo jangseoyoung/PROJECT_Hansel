@@ -63,6 +63,7 @@
 		EF47AF6A2542DD95000E1EE1 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				EF5684B02536FFA200702966 /* AppDelegate.swift */,
 				EF5684B42536FFA200702966 /* ViewController.swift */,
 				EF7C2946254049F200E3A586 /* AddViewController.swift */,
 				EF5684C525370DB400702966 /* SecondViewController.swift */,
@@ -90,17 +91,24 @@
 			isa = PBXGroup;
 			children = (
 				EF47AF692542DD8E000E1EE1 /* Model */,
-				EF47AF6A2542DD95000E1EE1 /* VC */,
 				EF47AF672542DD04000E1EE1 /* UI */,
-				EF5684B02536FFA200702966 /* AppDelegate.swift */,
+				EF47AF6A2542DD95000E1EE1 /* VC */,
+				EF56B958254317A300093F59 /* Cell */,
 				EF5684B22536FFA200702966 /* SceneDelegate.swift */,
-				EF47AF642542C7D9000E1EE1 /* DetailTableViewCell.swift */,
-				EF47AF612542C759000E1EE1 /* PreTableViewCell.swift */,
 				EF5684B92536FFA500702966 /* Assets.xcassets */,
 				EF5684BB2536FFA500702966 /* LaunchScreen.storyboard */,
 				EF5684BE2536FFA500702966 /* Info.plist */,
 			);
 			path = Hansel;
+			sourceTree = "<group>";
+		};
+		EF56B958254317A300093F59 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF47AF612542C759000E1EE1 /* PreTableViewCell.swift */,
+				EF47AF642542C7D9000E1EE1 /* DetailTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
