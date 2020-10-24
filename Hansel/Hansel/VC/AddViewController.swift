@@ -19,20 +19,31 @@ class AddViewController: UIViewController {
     @IBOutlet weak var leaveminuteTextField: UITextField!
     
     @IBOutlet weak var addressTextField: UITextField!
-
+    @IBOutlet weak var searchButton: UIButton!
+    
     @IBOutlet weak var memoTextView: UITextView!
+    
+    @IBOutlet weak var addButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
         self.navigationController?.navigationBar.topItem?.title = "All Routes"
+        
         self.memoTextView.layer.borderWidth = 1.0
         self.memoTextView.layer.borderColor = UIColor.black.cgColor
         self.memoTextView.layer.cornerRadius = 10
         
+        self.searchButton.layer.borderWidth = 1.0
+        self.searchButton.layer.borderColor = UIColor.black.cgColor
+        self.searchButton.layer.cornerRadius = 5
         
+        self.addButton.layer.borderWidth = 1.0
+        self.addButton.layer.borderColor = UIColor.black.cgColor
+        self.addButton.layer.cornerRadius = 5
         
-        // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -100,6 +111,8 @@ class AddViewController: UIViewController {
         addressTextField.layer.addSublayer(border7)
         addressTextField.textAlignment = .center
         addressTextField.textColor = UIColor.black
+        
+        
     }
     
 

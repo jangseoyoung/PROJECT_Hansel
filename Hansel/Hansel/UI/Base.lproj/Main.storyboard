@@ -134,17 +134,36 @@
                                 <state key="normal" title="검색">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="1py-Ks-w8D" eventType="touchUpInside" id="QbO-DN-lJd"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-XT-34O">
+                                <rect key="frame" x="304" y="682" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="추가">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="1py-Ks-w8D" eventType="touchUpInside" id="Q9W-qp-xrb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="스크린샷 2020-10-24 오전 11.48.34" translatesAutoresizingMaskIntoConstraints="NO" id="IeJ-zD-NUM">
+                                <rect key="frame" x="194" y="158" width="20" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="스크린샷 2020-10-24 오전 11.48.34" translatesAutoresizingMaskIntoConstraints="NO" id="rJO-xe-dZY">
+                                <rect key="frame" x="254" y="158" width="20" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qay-8l-z0e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Route" id="u7y-Md-nY7">
-                        <barButtonItem key="backBarButtonItem" title="All Routes" id="g9N-Cx-x9f">
-                            <color key="tintColor" name="AccentColor"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add Route" id="u7y-Md-nY7"/>
                     <connections>
+                        <outlet property="addButton" destination="xjP-XT-34O" id="Pge-xd-RNq"/>
                         <outlet property="addressTextField" destination="gVV-zx-HQY" id="Qkh-xE-Sof"/>
                         <outlet property="arrivehourTextField" destination="DuM-Om-ceT" id="ovc-Js-MEC"/>
                         <outlet property="arriveminuteTextField" destination="qVc-kt-dNb" id="2vO-I4-1y8"/>
@@ -153,12 +172,13 @@
                         <outlet property="leaveminuteTextField" destination="kOy-94-LDu" id="yKe-UK-gaw"/>
                         <outlet property="memoTextView" destination="bvN-9L-1jK" id="YaG-9k-m3s"/>
                         <outlet property="monthTextField" destination="Xob-lR-dxx" id="gOX-3Y-2eh"/>
+                        <outlet property="searchButton" destination="gc4-eL-Iid" id="kvi-85-L2h"/>
                         <outlet property="yearTextField" destination="QCu-Eu-QaZ" id="807-g8-PrO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WG0-4i-bna" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="631"/>
+            <point key="canvasLocation" x="1766.6666666666667" y="630.80357142857144"/>
         </scene>
         <!--Detail Routes-->
         <scene sceneID="aGk-Ze-J8w">
@@ -421,6 +441,7 @@
         <image name="122120578_1043410326108062_3876743307898086273_n" width="43" height="387"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="스크린샷 2020-10-24 오전 11.48.34" width="201" height="22"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
