@@ -7,12 +7,21 @@
 
 import UIKit
 
+var hansel__ = [Hansel]()
+
 class SecondViewController: UIViewController {
+    
+    @IBAction func AllRoutesButton (_ sender : UIBarItem){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBOutlet weak var DetailTableView : UITableView!
     
     @IBOutlet weak var yearLabel : UILabel!
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var countLabel : UILabel!
     @IBOutlet weak var routesCount: UITextView!
+    
 
     @IBAction func DeleteButton(_ sender : UIBarButtonItem){
         let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "현재 날짜의 모든 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
@@ -35,6 +44,7 @@ class SecondViewController: UIViewController {
         self.routesCount.layer.borderWidth = 2.0
         self.routesCount.layer.borderColor = UIColor.black.cgColor
         
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,6 +53,12 @@ class SecondViewController: UIViewController {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as! DetailTableViewCell
+        
+        cell.addressLabel?.text = hansel[indexPath.row].address
+        cell.arriveTime?.text = arrivetime
+        cell.leaveTime?.text = leavetime
+        cell.memoTextView?.text = hansel[indexPath.row].memo
+        
         return cell
         
     }

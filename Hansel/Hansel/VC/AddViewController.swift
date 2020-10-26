@@ -7,7 +7,18 @@
 
 import UIKit
 
+var hansel = [Hansel]()
+
+var date : String = " "
+var arrivetime : String = " "
+var leavetime : String = " "
+
 class AddViewController: UIViewController {
+    
+    @IBAction func allRouteButton (_ sender : UIBarItem){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     @IBOutlet weak var yearTextField: UITextField!
     @IBOutlet weak var monthTextField: UITextField!
@@ -25,6 +36,32 @@ class AddViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     
+    @IBAction func addButton(_ sender : UIButton){
+        let year = yearTextField.text!
+        let month = monthTextField.text!
+        let day = dayTextField.text!
+        
+        let arrivehour = arrivehourTextField.text!
+        let arriveminute = arriveminuteTextField.text!
+        
+        let leavehour = leavehourTextField.text!
+        let leaveminute = leaveminuteTextField.text!
+        
+        let address = addressTextField.text!
+        let memo = memoTextView.text!
+        
+        let item : Hansel = Hansel(year : year, month : month, day: day, arriveHour : arrivehour, arriveMin : arriveminute, leaveHour : leavehour, leaveMin : leaveminute, address : address, memo : memo)
+        
+        date = month + "월" + day + "일"
+        arrivetime = arrivehour + ":" + arriveminute
+        leavetime = leavehour + ":" + leaveminute
+        
+        hansel.append(item)
+        
+        //Hansel.append(item)
+        self.navigationController?.popViewController(animated : true)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +82,7 @@ class AddViewController: UIViewController {
         self.addButton.layer.cornerRadius = 5
         
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
