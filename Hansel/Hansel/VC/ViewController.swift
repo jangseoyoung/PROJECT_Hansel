@@ -7,8 +7,6 @@
 
 import UIKit
 
-var hansel_ = [Hansel]()
-
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var PreTableView : UITableView!
@@ -17,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hansel.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,12 +28,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return Cell
     }
     
-    
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        PreTableView.dataSource = self
+        PreTableView.delegate = self
+        PreTableView.rowHeight = 95
         
         let border = CALayer()
         border.frame = CGRect(x: 0, y: BackgroundView.frame.size.height-1, width: BackgroundView.frame.width, height: 1)

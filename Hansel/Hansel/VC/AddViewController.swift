@@ -9,6 +9,7 @@ import UIKit
 
 var hansel = [Hansel]()
 
+var yeardate : String = " "
 var date : String = " "
 var arrivetime : String = " "
 var leavetime : String = " "
@@ -52,6 +53,7 @@ class AddViewController: UIViewController {
         
         let item : Hansel = Hansel(year : year, month : month, day: day, arriveHour : arrivehour, arriveMin : arriveminute, leaveHour : leavehour, leaveMin : leaveminute, address : address, memo : memo)
         
+        yeardate = year + "년"
         date = month + "월" + day + "일"
         arrivetime = arrivehour + ":" + arriveminute
         leavetime = leavehour + ":" + leaveminute

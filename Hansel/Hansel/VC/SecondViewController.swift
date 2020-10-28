@@ -7,9 +7,7 @@
 
 import UIKit
 
-var hansel__ = [Hansel]()
-
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func AllRoutesButton (_ sender : UIBarItem){
         self.navigationController?.popViewController(animated: true)
@@ -35,8 +33,18 @@ class SecondViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        yearLabel.text = yeardate
+        dateLabel.text = date
+        countLabel.text = String(hansel.count)
+        
+        
+        DetailTableView.dataSource = self
+        DetailTableView.delegate = self
+        DetailTableView.rowHeight = 152
         
         self.navigationController?.navigationBar.topItem?.title = "All Routes"
         
@@ -44,11 +52,10 @@ class SecondViewController: UIViewController {
         self.routesCount.layer.borderWidth = 2.0
         self.routesCount.layer.borderColor = UIColor.black.cgColor
         
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return hansel.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
