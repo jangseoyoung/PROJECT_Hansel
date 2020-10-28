@@ -30,7 +30,8 @@ class DetailTableViewCell: UITableViewCell {
         
         memoTextView.layer.borderWidth = 1.0
         memoTextView.layer.borderColor = UIColor.black.cgColor
-        memoTextView.layer.cornerRadius = 0.5 * memoTextView.bounds.size.width
+        memoTextView.layer.cornerRadius = 30
+        
         
         // Initialization code
     }

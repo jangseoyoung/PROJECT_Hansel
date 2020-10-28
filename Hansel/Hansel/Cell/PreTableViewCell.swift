@@ -12,14 +12,17 @@ class PreTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var countTextView : UITextView!
     @IBOutlet weak var countLabel : UILabel!
-
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
+        dateLabel.text = date
+        
         countTextView.layer.borderWidth = 1.0
         countTextView.layer.borderColor = UIColor.black.cgColor
         countTextView.layer.cornerRadius = 0.5 * countTextView.bounds.size.width
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
