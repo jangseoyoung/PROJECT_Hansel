@@ -22,6 +22,7 @@ class DetailTableViewCell: UITableViewCell {
     
     @IBAction func DeleteDetailButton(_ sender: UIButton) {
         
+        
     }
     
     
