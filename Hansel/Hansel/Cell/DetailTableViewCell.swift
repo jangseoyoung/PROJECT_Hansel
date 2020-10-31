@@ -21,7 +21,14 @@ class DetailTableViewCell: UITableViewCell {
     }
     
     @IBAction func DeleteDetailButton(_ sender: UIButton) {
+        let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "선택하신 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
         
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        
+        let deleteAction = UIAlertAction(title: "삭제", style: .destructive, handler: nil)
+        
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
         
     }
     
@@ -32,7 +39,6 @@ class DetailTableViewCell: UITableViewCell {
         memoTextView.layer.borderWidth = 1.0
         memoTextView.layer.borderColor = UIColor.black.cgColor
         memoTextView.layer.cornerRadius = 20
-        
         
         // Initialization code
     }
