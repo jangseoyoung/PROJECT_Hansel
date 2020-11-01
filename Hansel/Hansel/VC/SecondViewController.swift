@@ -20,6 +20,8 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var countLabel : UILabel!
     @IBOutlet weak var routesCount: UITextView!
     
+    @IBOutlet weak var BackgroundView : UIView!
+    
 
     @IBAction func DeleteButton(_ sender : UIBarButtonItem){
         let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "현재 날짜의 모든 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
@@ -57,6 +59,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         self.routesCount.layer.borderWidth = 2.0
         self.routesCount.layer.borderColor = UIColor.black.cgColor
         
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,7 +73,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         cell.arriveTime?.text = arrivetime
         cell.leaveTime?.text = leavetime
         cell.memoTextView?.text = hansel[indexPath.row].memo
-        
+    
         return cell
         
     }
