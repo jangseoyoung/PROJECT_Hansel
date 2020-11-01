@@ -232,7 +232,6 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 </view>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Weu-eH-OIp" customClass="s">
@@ -332,6 +331,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="BackgroundView" destination="dnG-W8-5tR" id="Koo-jT-04y"/>
                         <outlet property="DetailTableView" destination="W2X-kF-OhE" id="xqq-RH-VUv"/>
                         <outlet property="countLabel" destination="44k-cm-tfb" id="SUv-Xb-Bs5"/>
                         <outlet property="dateLabel" destination="fgG-H3-E0C" id="I9Q-jn-he5"/>
@@ -476,9 +476,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
