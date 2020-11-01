@@ -26,8 +26,9 @@ class DetailTableViewCell: UITableViewCell {
         let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
         
         let deleteAction = UIAlertAction(title: "삭제", style: .destructive){
-            (action) in hansel.removeAll()
+            (action) in
         }
+
         
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
