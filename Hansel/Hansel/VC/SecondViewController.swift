@@ -26,7 +26,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
         
-        let deleteAction = UIAlertAction(title: "삭제", style: .destructive, handler: nil)
+        let deleteAction = UIAlertAction(title: "삭제", style: .destructive){
+            (action) in hansel.removeAll()
+            
+            self.navigationController?.popViewController(animated: true)
+            
+        }
         
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
@@ -68,6 +73,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        DetailTableView.reloadData()
     }
     
     

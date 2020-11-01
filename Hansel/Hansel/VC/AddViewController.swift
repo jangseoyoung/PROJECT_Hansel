@@ -14,7 +14,23 @@ var date : String = " "
 var arrivetime : String = " "
 var leavetime : String = " "
 
+var year : String = ""
+var month : String = ""
+var day : String = ""
+
+var arrivehour : String = ""
+var arriveminute : String = ""
+var leavehour : String = ""
+var leaveminute : String = ""
+
+var address : String = ""
+var memo : String = ""
+
 class AddViewController: UIViewController {
+    
+    let alert = UIAlertController(title: "경로를 추가하시겠습니까?", message: nil, preferredStyle: UIAlertController.Style.alert)
+     
+    
     
     @IBAction func allRouteButton (_ sender : UIBarItem){
         self.navigationController?.popViewController(animated: true)
@@ -38,18 +54,18 @@ class AddViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     @IBAction func addButton(_ sender : UIButton){
-        let year = yearTextField.text!
-        let month = monthTextField.text!
-        let day = dayTextField.text!
+        year = yearTextField.text!
+        month = monthTextField.text!
+        day = dayTextField.text!
         
-        let arrivehour = arrivehourTextField.text!
-        let arriveminute = arriveminuteTextField.text!
+        arrivehour = arrivehourTextField.text!
+        arriveminute = arriveminuteTextField.text!
         
-        let leavehour = leavehourTextField.text!
-        let leaveminute = leaveminuteTextField.text!
+        leavehour = leavehourTextField.text!
+        leaveminute = leaveminuteTextField.text!
         
-        let address = addressTextField.text!
-        let memo = memoTextView.text!
+        address = addressTextField.text!
+        memo = memoTextView.text!
         
         let item : Hansel = Hansel(year : year, month : month, day: day, arriveHour : arrivehour, arriveMin : arriveminute, leaveHour : leavehour, leaveMin : leaveminute, address : address, memo : memo)
         
@@ -58,11 +74,23 @@ class AddViewController: UIViewController {
         arrivetime = arrivehour + ":" + arriveminute
         leavetime = leavehour + ":" + leaveminute
         
-        hansel.append(item)
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
         
-        //Hansel.append(item)
-        self.navigationController?.popViewController(animated : true)
+        let addAction = UIAlertAction(title: "추가", style: .default) {
+            (action) in hansel.append(item)
+            self.navigationController?.popViewController(animated : true)
+            
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(addAction)
+       
+        present(alert, animated: true, completion: nil)
         
+        
+    }
+    
+    func dismissFunc(){
+        self.alert.dismiss(animated : true, completion : nil)
     }
     
     override func viewDidLoad() {
@@ -70,6 +98,7 @@ class AddViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.topItem?.title = "All Routes"
+    
         
         self.memoTextView.layer.borderWidth = 1.0
         self.memoTextView.layer.borderColor = UIColor.black.cgColor
@@ -84,6 +113,7 @@ class AddViewController: UIViewController {
         self.addButton.layer.cornerRadius = 5
         
     }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

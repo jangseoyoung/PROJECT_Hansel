@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return hansel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,6 +41,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         border.backgroundColor = UIColor.black.cgColor
         BackgroundView.layer.addSublayer(border)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        PreTableView.reloadData()
     }
 
 }
