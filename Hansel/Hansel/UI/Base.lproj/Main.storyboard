@@ -310,7 +310,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="addressLabel" destination="elB-7f-dG8" id="NaD-Tr-bsI"/>
+                                            <outlet property="addressLabel" destination="0cj-B3-Bgu" id="VSx-iw-M3w"/>
                                             <outlet property="arriveTime" destination="elB-7f-dG8" id="mW9-uh-eAI"/>
                                             <outlet property="leaveTime" destination="aHL-xF-BnQ" id="aGX-nh-c39"/>
                                             <outlet property="lineimageView" destination="k2w-Dm-SIU" id="Bvo-CT-Pl0"/>
@@ -397,7 +397,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvD-Kc-beD">
-                                                    <rect key="frame" x="50" y="18" width="154" height="59"/>
+                                                    <rect key="frame" x="50" y="18" width="229" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                     <color key="textColor" red="0.15686274510000001" green="0.13725490200000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
