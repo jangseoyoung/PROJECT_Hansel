@@ -12,6 +12,7 @@ class PreTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var countTextView : UITextView!
     @IBOutlet weak var countLabel : UILabel!
+    
   
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,7 @@ class PreTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
 
         // Configure the view for the selected state
     }
