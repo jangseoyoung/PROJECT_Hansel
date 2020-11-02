@@ -30,12 +30,9 @@ class AddViewController: UIViewController {
     
     let alert = UIAlertController(title: "경로를 추가하시겠습니까?", message: nil, preferredStyle: UIAlertController.Style.alert)
      
-    
-    
     @IBAction func allRouteButton (_ sender : UIBarItem){
         self.navigationController?.popViewController(animated: true)
     }
-    
     
     @IBOutlet weak var yearTextField: UITextField!
     @IBOutlet weak var monthTextField: UITextField!
@@ -52,7 +49,6 @@ class AddViewController: UIViewController {
     @IBOutlet weak var memoTextView: UITextView!
     
     @IBOutlet weak var addButton: UIButton!
-    
     @IBAction func addButton(_ sender : UIButton){
         
         year = yearTextField.text!
@@ -80,45 +76,37 @@ class AddViewController: UIViewController {
         let addAction = UIAlertAction(title: "추가", style: .default) {
             (action) in hansel.append(item)
             self.navigationController?.popViewController(animated : true)
-            
         }
+        
         alert.addAction(cancelAction)
         alert.addAction(addAction)
        
         present(alert, animated: true, completion: nil)
         
-        
-    }
-    
-    func dismissFunc(){
-        self.alert.dismiss(animated : true, completion : nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // title = All Routes
         self.navigationController?.navigationBar.topItem?.title = "All Routes"
-    
         
+        // memoTextView UI 적용
         self.memoTextView.layer.borderWidth = 1.0
         self.memoTextView.layer.borderColor = UIColor.black.cgColor
         self.memoTextView.layer.cornerRadius = 10
         
-        self.searchButton.layer.borderWidth = 1.0
-        self.searchButton.layer.borderColor = UIColor.black.cgColor
-        self.searchButton.layer.cornerRadius = 5
-        
-        self.addButton.layer.borderWidth = 1.0
-        self.addButton.layer.borderColor = UIColor.black.cgColor
-        self.addButton.layer.cornerRadius = 5
+        // 버튼 테두리 UI 적용
+        makeBorderLine(searchButton)
+        makeBorderLine(addButton)
         
     }
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        // 버튼 밑줄 UI 적용
         makeUnderLine(yearTextField)
         makeUnderLine(monthTextField)
         makeUnderLine(dayTextField)
@@ -129,7 +117,14 @@ class AddViewController: UIViewController {
         makeUnderLine(addressTextField)
     }
     
-
+    // 버튼 테두리 UI
+    func makeBorderLine(_ Button : UIButton){
+        Button.layer.borderWidth = 1.0
+        Button.layer.borderColor = UIColor.black.cgColor
+        Button.layer.cornerRadius = 5
+    }
+    
+    // 입력창 밑줄 UI
     func makeUnderLine(_ textField: UITextField) {
         textField.borderStyle = .none
         let border = CALayer()

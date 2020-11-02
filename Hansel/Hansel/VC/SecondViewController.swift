@@ -19,7 +19,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var countLabel : UILabel!
     @IBOutlet weak var routesCount: UITextView!
     @IBOutlet weak var BackgroundView : UIView!
-    
 
     @IBAction func DeleteButton(_ sender : UIBarButtonItem){
         let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "현재 날짜의 모든 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
@@ -35,7 +34,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
-        
         
         present(alert, animated: true, completion: nil)
     }
