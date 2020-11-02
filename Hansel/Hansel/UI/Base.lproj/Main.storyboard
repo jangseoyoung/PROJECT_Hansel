@@ -299,7 +299,6 @@
                                                     <state key="normal" title="Button" image="xmark" catalog="system"/>
                                                     <connections>
                                                         <action selector="DeleteDetailButton:" destination="crh-iu-naH" eventType="touchUpInside" id="8cI-gj-nno"/>
-                                                        <action selector="smalldeleteButton:" destination="crh-iu-naH" eventType="touchUpInside" id="IQ3-qr-zgF"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="122120578_1043410326108062_3876743307898086273_n" translatesAutoresizingMaskIntoConstraints="NO" id="k2w-Dm-SIU">
@@ -311,6 +310,7 @@
                                         <connections>
                                             <outlet property="addressLabel" destination="0cj-B3-Bgu" id="VSx-iw-M3w"/>
                                             <outlet property="arriveTime" destination="elB-7f-dG8" id="mW9-uh-eAI"/>
+                                            <outlet property="deleteButton" destination="9kn-8x-I2A" id="c3W-bg-Nko"/>
                                             <outlet property="leaveTime" destination="aHL-xF-BnQ" id="aGX-nh-c39"/>
                                             <outlet property="lineimageView" destination="k2w-Dm-SIU" id="Bvo-CT-Pl0"/>
                                             <outlet property="memoTextView" destination="5X1-9W-lsw" id="vxQ-mo-zO0"/>
