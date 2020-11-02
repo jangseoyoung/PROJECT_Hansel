@@ -16,9 +16,7 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var leaveTime: UILabel!
     @IBOutlet weak var memoTextView: UITextView!
     @IBOutlet weak var lineimageView: UIImageView!
-    @IBAction func smalldeleteButton(_ sender: UIButton) {
-        
-    }
+    @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func DeleteDetailButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "선택하신 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
@@ -28,12 +26,9 @@ class DetailTableViewCell: UITableViewCell {
         let deleteAction = UIAlertAction(title: "삭제", style: .destructive){
             (action) in
         }
-
         
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
-        
-        // present(alert, animated : true, completion : nil)
         
     }
     
