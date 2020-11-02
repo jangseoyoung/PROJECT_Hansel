@@ -14,12 +14,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBOutlet weak var DetailTableView : UITableView!
-    
     @IBOutlet weak var yearLabel : UILabel!
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var countLabel : UILabel!
     @IBOutlet weak var routesCount: UITextView!
-    
     @IBOutlet weak var BackgroundView : UIView!
     
 
@@ -37,6 +35,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
+        
         
         present(alert, animated: true, completion: nil)
     }
@@ -58,8 +57,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         self.routesCount.layer.cornerRadius = 0.5 * routesCount.bounds.size.width
         self.routesCount.layer.borderWidth = 2.0
         self.routesCount.layer.borderColor = UIColor.black.cgColor
-        
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,18 +70,33 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         cell.arriveTime?.text = arrivetime
         cell.leaveTime?.text = leavetime
         cell.memoTextView?.text = hansel[indexPath.row].memo
-    
-        return cell
         
+        cell.deleteButton.tag = indexPath.row
+        cell.deleteButton.addTarget(self, action: #selector(deleteDetailButton(sender:)), for: .touchUpInside)
+        
+        return cell
     }
     
     override func viewWillAppear(_ animated: Bool) {
         DetailTableView.reloadData()
     }
-    
-    
-    
 
+    @objc func deleteDetailButton(sender: UIButton) {
+        let alert = UIAlertController(title: "정말 삭제하시겠습니까?", message: "선택하신 기록이 삭제됩니다.", preferredStyle: UIAlertController.Style.alert)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        
+        let deleteAction = UIAlertAction(title: "삭제", style: .destructive){
+            (action) in
+            hansel.remove(at: sender.tag)
+            self.DetailTableView.reloadData()
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

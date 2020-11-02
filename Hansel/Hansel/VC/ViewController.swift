@@ -24,7 +24,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Cell.dateLabel.text = date
         Cell.countLabel.text = String(hansel.count)
         
-        
         return Cell
     }
     
