@@ -8,6 +8,7 @@
 import UIKit
 
 var hansel = [Hansel]()
+var preview = [PreRoutes]()
 
 var yeardate : String = " "
 var date : String = " "
@@ -66,6 +67,16 @@ class AddViewController: UIViewController {
         
         let item : Hansel = Hansel(year : year, month : month, day: day, arriveHour : arrivehour, arriveMin : arriveminute, leaveHour : leavehour, leaveMin : leaveminute, address : address, memo : memo)
         
+    
+        if !preview.isEmpty{
+            for i in 0..<hansel.count{
+                preview[i].count+=1
+                if preview[i].maindate != date{
+                    
+                }
+            }
+        }
+        
         yeardate = year + "년"
         date = month + "월" + day + "일"
         arrivetime = arrivehour + ":" + arriveminute
@@ -74,7 +85,8 @@ class AddViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
         
         let addAction = UIAlertAction(title: "추가", style: .default) {
-            (action) in hansel.append(item)
+            (action) in
+            hansel.append(item)
             self.navigationController?.popViewController(animated : true)
         }
         
