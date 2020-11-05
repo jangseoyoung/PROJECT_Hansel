@@ -71,8 +71,8 @@ class AddViewController: UIViewController {
         if !preview.isEmpty{
             for i in 0..<hansel.count{
                 preview[i].count+=1
-                if preview[i].maindate != date{
-                    
+                if preview[i].maindate != date{ // date는 임시 데이터 이거 넣으면 큰일남
+                    // append를 해야 하는데 대체 뭘 어떻게 어팬드해야 오류가 안 나고 꼬이지 않을까요
                 }
             }
         }
