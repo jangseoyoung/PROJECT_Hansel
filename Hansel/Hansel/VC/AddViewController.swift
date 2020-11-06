@@ -50,6 +50,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var memoTextView: UITextView!
     
     @IBOutlet weak var addButton: UIButton!
+    
     @IBAction func addButton(_ sender : UIButton){
         
         year = yearTextField.text!
@@ -67,12 +68,25 @@ class AddViewController: UIViewController {
         
         let item : Hansel = Hansel(year : year, month : month, day: day, arriveHour : arrivehour, arriveMin : arriveminute, leaveHour : leavehour, leaveMin : leaveminute, address : address, memo : memo)
         
-    
+        UserDefaults.standard.set(year, forKey:"year")
+        UserDefaults.standard.set(month, forKey: "month")
+        UserDefaults.standard.set(day, forKey: "day")
+        UserDefaults.standard.set(arrivehour, forKey: "arrivehour")
+        UserDefaults.standard.set(arriveminute, forKey: "arriveminute")
+        UserDefaults.standard.set(leavehour, forKey: "leavehour")
+        UserDefaults.standard.set(leaveminute, forKey: "leaveminute")
+        UserDefaults.standard.set(address, forKey: "address")
+        UserDefaults.standard.set(memo, forKey: "memo")
+            
         if !preview.isEmpty{
             for i in 0..<hansel.count{
                 preview[i].count+=1
-                if preview[i].maindate != date{ // date는 임시 데이터 이거 넣으면 큰일남
-                    // append를 해야 하는데 대체 뭘 어떻게 어팬드해야 오류가 안 나고 꼬이지 않을까요
+                if preview[i].maindate != date{ // 1. date는 임시 데이터 이거 넣으면 큰일남 2. 대체 button action 안에서 어떻게 이전 정보를 가져오는걸까요
+                    // 3. append를 해야 하는데 대체 뭘 어떻게 어팬드해야 오류가 안 나고 꼬이지 않을까요
+                    // 4. 모델 두개를 대체 어떻게 써야 할까요 애초에 같은 액션 안에 있어도 되는건가 내가 이해한 것은 무엇인가 있긴 한 것인가
+                    // 5. 코드 정리를 해보자 먼저 preview가 이즈엠티면 한셀의 수만큼 반복문을 돌고 카운트를 하나씩 올린다 나중에 이 카운트를 카운트 레이블에 출력해줘야겠지 이게 맞나 일단 암튼
+                    // 6. 만약 프리뷰에 있는 날짜가 현재 입력된 날짜와 다르다면 세로운 테이블뷰 셀을 만들어서 넣어주고 같은 날짜가 하나라도 있다면 그 테이블뷰 셀에서 디테일 루트로 넘어가서 거기에 넣어줘야겠지 그럼 이 과정을 어떻게 해야할까 서영아 생각을 하자
+                    // 7. 내가 모르는 것은 스위프트 문법인가 이 로직인가 아니면 전부인가
                 }
             }
         }
@@ -112,6 +126,7 @@ class AddViewController: UIViewController {
         // 버튼 테두리 UI 적용
         makeBorderLine(searchButton)
         makeBorderLine(addButton)
+        
         
     }
     
