@@ -20,7 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let Cell = tableView.dequeueReusableCell(withIdentifier: "PreCell") as! PreTableViewCell
         
-        Cell.dateLabel.text = UserDefaults.standard.object(forKey: "month") as! String + "월 " +        UserDefaults.standard.object(forKey: "day")as! String + "일"
+        Cell.dateLabel.text = UserDefaults.standard.object(forKey: "month") as? String
+        
 
         Cell.countLabel.text = String(hansel.count)
         
